@@ -1,0 +1,22 @@
+{
+  "name": "phapi/phapi-configuration",
+  "description": "Example of how Phapi can be configured",
+  "keywords": [
+    "configuration", "api", "framework", "phapi"
+  ],
+  "version": "1.0.0",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "homepage": "http://phapi.github.io",
+  "authors": [
+    {
+      "name": "Peter Ahinko",
+      "email": "peter@ahinko.se",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0",
+    "phapi/phapi-framework": "1.*"
+  }
+}
