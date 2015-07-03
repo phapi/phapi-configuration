@@ -34,7 +34,7 @@
     //$log = new Logger('default');
 
     // IMPORTANT! Make sure you use an absolute path. Relative paths aren't guaranteed to
-    // work in cases where errors and exceptions occur.
+    // work in some cases where errors and exceptions occur.
     //$log->pushHandler(new StreamHandler('/www/phapi/app/logs/logfile.log', Logger::WARNING));
     //return $log;
 //};
