@@ -17,6 +17,6 @@
   ],
   "require": {
     "php": ">=5.6.0",
-    "phapi/phapi-framework": "1.*"
+    "phapi/phapi-framework": "2.*"
   }
 }
