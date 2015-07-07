@@ -93,8 +93,7 @@ $pipeline->pipe(new \Phapi\Middleware\Deserializer\Json\Json());
  * The following serializers are NOT installed by default. See the documentation for
  * more information about how to install them before uncommenting the line(s) below.
  */
-$pipeline->pipe(new \Phapi\Middleware\Deserializer\Yaml\Yaml());
-
+//$pipeline->pipe(new \Phapi\Middleware\Deserializer\Yaml\Yaml());
 
 /*
  * This is where you usualy add new middleware to the pipeline. Please note that this
