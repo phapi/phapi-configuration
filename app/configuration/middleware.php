@@ -28,6 +28,12 @@ $pipeline->pipe(new \Phapi\Middleware\Courier\Courier());
 $pipeline->pipe(new \Phapi\Middleware\Serializer\Json\Json());
 
 /*
+ * The following serializers are NOT installed by default. See the documentation for
+ * more information about how to install them before uncommenting the line(s) below.
+ */
+//$pipeline->pipe(new \Phapi\Middleware\Serializer\Yaml\Yaml());
+
+/*
  * Mistake middleware is an error handler. Serializer will serialize the error
  * message and Courier will return it to the client.
  */
@@ -82,6 +88,21 @@ $pipeline->pipe(new \Phapi\Middleware\PostBox\PostBox());
  * Deserializer middleware that deserializes any content provided in the request.
  */
 $pipeline->pipe(new \Phapi\Middleware\Deserializer\Json\Json());
+
+/*
+ * The following serializers are NOT installed by default. See the documentation for
+ * more information about how to install them before uncommenting the line(s) below.
+ */
+$pipeline->pipe(new \Phapi\Middleware\Deserializer\Yaml\Yaml());
+
+
+/*
+ * This is where you usualy add new middleware to the pipeline. Please note that this
+ * might differ depending on the functionality of the middleware. There is no golden
+ * rule that fits all middleware. You have to figure out in what order the different
+ * middleware should execute.
+ */
+
 
 /*
  * Add the dispatcher to the pipeline. The dispatcher middleware is part of
