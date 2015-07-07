@@ -32,6 +32,7 @@ $pipeline->pipe(new \Phapi\Middleware\Serializer\Json\Json());
  * more information about how to install them before uncommenting the line(s) below.
  */
 //$pipeline->pipe(new \Phapi\Middleware\Serializer\Yaml\Yaml());
+//$pipeline->pipe(new \Phapi\Middleware\Serializer\Xml\Xml());
 
 /*
  * Mistake middleware is an error handler. Serializer will serialize the error
@@ -94,6 +95,7 @@ $pipeline->pipe(new \Phapi\Middleware\Deserializer\Json\Json());
  * more information about how to install them before uncommenting the line(s) below.
  */
 //$pipeline->pipe(new \Phapi\Middleware\Deserializer\Yaml\Yaml());
+//$pipeline->pipe(new \Phapi\Middleware\Deserializer\Xml\Xml());
 
 /*
  * This is where you usualy add new middleware to the pipeline. Please note that this
