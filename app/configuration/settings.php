@@ -22,6 +22,22 @@
 //};
 
 /*
+ * Redis example. Please note that the Redis Cache Provider is NOT included by default by
+ * Phapi. Please see https://github.com/phapi/cache-redis for more information about how to
+ * install the package. When the package is installed, uncomment and modify host and port
+ * (if needed). Please note that this version of the Redis Cache Provider does NOT support
+ * redis clusters.
+ */
+//$container['cache'] = function ($container) {
+//    return new \Phapi\Cache\Redis\Redis($servers = [
+//        [
+//            'host' => 'localhost',
+//            'port' => 6379,
+//        ]
+//    ]);
+//};
+
+/*
  * Custom logging example. Please note that the Monolog package is NOT included by
  * default by Phapi. Please see the documentation for more information about how to
  * install the package. When the package is installed, uncomment the following lines
