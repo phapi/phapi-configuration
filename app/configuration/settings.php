@@ -6,6 +6,24 @@
  * application settings.
  */
 
+ /*
+  * Custom logging example. Please note that the Monolog package is NOT included by
+  * default by Phapi. Please see the documentation for more information about how to
+  * install the package. When the package is installed, uncomment the following lines
+  * and modify them to match your needs.
+  */
+ //use Monolog\Logger;
+ //use Monolog\Handler\StreamHandler;
+
+ //$container['log'] = function ($container) {
+     //$log = new Logger('default');
+
+     // IMPORTANT! Make sure you use an absolute path. Relative paths aren't guaranteed to
+     // work in some cases where errors and exceptions occur.
+     //$log->pushHandler(new StreamHandler('/www/phapi/app/logs/logfile.log', Logger::WARNING));
+     //return $log;
+ //};
+
 /*
  * Memcache example. Please note that the Memcache package is NOT included by default
  * by Phapi. Please see https://github.com/phapi/cache-memcache for more information
@@ -35,22 +53,4 @@
 //            'port' => 6379,
 //        ]
 //    ]);
-//};
-
-/*
- * Custom logging example. Please note that the Monolog package is NOT included by
- * default by Phapi. Please see the documentation for more information about how to
- * install the package. When the package is installed, uncomment the following lines
- * and modify them to match your needs.
- */
-//use Monolog\Logger;
-//use Monolog\Handler\StreamHandler;
-
-//$container['log'] = function ($container) {
-    //$log = new Logger('default');
-
-    // IMPORTANT! Make sure you use an absolute path. Relative paths aren't guaranteed to
-    // work in some cases where errors and exceptions occur.
-    //$log->pushHandler(new StreamHandler('/www/phapi/app/logs/logfile.log', Logger::WARNING));
-    //return $log;
 //};
