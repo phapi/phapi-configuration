@@ -105,7 +105,7 @@ $pipeline->pipe(new \Phapi\Middleware\Deserializer\Json\Json());
  */
 
 /*
- * Cross-site HTTP requests are HTTP requests for resources from a different domain
+ * Cross-site HTTP requests are HTTP requests for endpoints from a different domain
  * than the domain of the resource making the request. Also called HTTP access control
  * or CORS. See https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
  * for more information about how CORS works.
@@ -122,6 +122,21 @@ $pipeline->pipe(new \Phapi\Middleware\Deserializer\Json\Json());
 //    'supportsCredentials' => false,
 //];
 //$pipeline->pipe(new \Phapi\Middleware\Cors\Cors($corsOptions));
+
+/*
+ * Rate limit middleware limiting the amount of requests a client can do.
+ *
+ * This middleware are NOT installed by default. See the documentation for more information
+ * about how to install it before uncommenting these lines below.
+ */
+//$rateLimitBuckets = [
+//    'default' => new \Phapi\Middleware\RateLimit\Bucket(),
+//];
+//$pipeline->pipe(new \Phapi\Middleware\RateLimit\RateLimit(
+//    'Client-ID',
+//    $rateLimitBuckets,
+//    $container['cache']
+//));
 
 /*
  * Add the dispatcher to the pipeline. The dispatcher middleware is part of
