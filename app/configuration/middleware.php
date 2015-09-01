@@ -33,6 +33,7 @@ $pipeline->pipe(new \Phapi\Middleware\Serializer\Json\Json());
  */
 //$pipeline->pipe(new \Phapi\Middleware\Serializer\Yaml\Yaml());
 //$pipeline->pipe(new \Phapi\Middleware\Serializer\Xml\Xml());
+//$pipeline->pipe(new \Phapi\Middleware\Serializer\Jsonp\Jsonp());
 
 /*
  * Mistake middleware is an error handler. Serializer will serialize the error
