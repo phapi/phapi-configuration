@@ -54,6 +54,12 @@ $pipeline->pipe(new \Phapi\Middleware\Uuid\Uuid());
 $pipeline->pipe(new \Phapi\Middleware\MethodOverride\MethodOverride());
 
 /*
+ * Format negotiation middleware negotiates the content type that the client requests.
+ * If the requested content type isn't supported an error message will be returned.
+ */
+$pipeline->pipe(new \Phapi\Middleware\ContentNegotiation\FormatNegotiation());
+
+/*
  * Route middleware includes both a router and a dispatcher that takes the request uri
  * and matches it against the route table. If a match is found the dispatcher dispatches
  * the request to the correct endpoint. Else a 404 Not Found will be sent to the client.
@@ -73,12 +79,6 @@ $routeMiddleware->addRoutes($routes);
 
 // Add the route middleware to the pipeline
 $pipeline->pipe($routeMiddleware);
-
-/*
- * Format negotiation middleware negotiates the content type that the client requests.
- * If the requested content type isn't supported an error message will be returned.
- */
-$pipeline->pipe(new \Phapi\Middleware\ContentNegotiation\FormatNegotiation());
 
 /*
  * PostBox middleware validates that any content included in the request can be
