@@ -119,7 +119,7 @@ $pipeline->pipe(new \Phapi\Middleware\Deserializer\Json\Json());
 //    'allowedMethods' => ['*'],
 //    'allowedHeaders' => ['*'],
 //    'exposedHeaders' => [],
-//    'maxAge' => 3600,
+//    'maxAge' => "3600",
 //    'supportsCredentials' => false,
 //];
 //$pipeline->pipe(new \Phapi\Middleware\Cors\Cors($corsOptions));
